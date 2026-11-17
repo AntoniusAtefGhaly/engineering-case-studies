@@ -8,7 +8,9 @@ Real production issues I investigated and solved, written up as case studies. De
 
 ## L3 – Production incidents
 
-_None yet._
+| # | Case | Tags | Hook |
+|---|------|------|------|
+| 002 | [Release blocked by a unique index on dirty data](cases/002-unique-index-migration-blocked-by-duplicates.md) | EF Core · Migrations · SQL Server · Release management · Prod incident | A unique index passed on clean staging and blocked prod; I chose to unblock with a weaker index and turn a risky data merge into a planned follow-up |
 
 ## L2 – Cross-cutting issues
 
