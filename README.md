@@ -11,6 +11,7 @@ Real production issues I investigated and solved, written up as case studies. De
 | # | Case | Tags | Hook |
 |---|------|------|------|
 | 002 | [Release blocked by a unique index on dirty data](cases/002-unique-index-migration-blocked-by-duplicates.md) | EF Core · Migrations · SQL Server · Release management · Prod incident | A unique index passed on clean staging and blocked prod; I chose to unblock with a weaker index and turn a risky data merge into a planned follow-up |
+| 003 | [Negotiated price silently overwrote the original bid](cases/003-tracked-entity-overwrote-original-bid-price.md) | EF Core · Change tracking · Microservices · Kafka/CAP · Data repair · Prod incident | A read-model helper mutated tracked entities; then the "obvious" repair source turned out to be overwritten too, so I rebuilt the bid from columns no service ever writes |
 
 ## L2 – Cross-cutting issues
 
